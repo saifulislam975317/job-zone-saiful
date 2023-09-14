@@ -6,7 +6,7 @@ const Header = () => {
         <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
         <div className="mr-24">
           <h1 className="text-4xl font-sans font-bold">
-            Building Your <br /> Bright Career Vision <br />
+            Building Your <br /> Bright Career Mission <br />
             <span className="text-purple-400">with Expertise</span>
           </h1>
           <p className="py-6">

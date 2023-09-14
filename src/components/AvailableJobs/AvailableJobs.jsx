@@ -17,7 +17,7 @@ const AvailableJobs = () => {
               <FaReact className="text-5xl text-purple-400"></FaReact>
             </span>
             <h1 className="font-bold text-xl font-sans">React Developer</h1>
-            <h3>Available jobs:50</h3>
+            <h3>Available jobs: 50+</h3>
           </div>
         </div>
         <div className="card w-64 bg-gray-100 shadow-xl">
@@ -26,7 +26,7 @@ const AvailableJobs = () => {
               <FaPhp className="text-5xl text-purple-400"></FaPhp>
             </span>
             <h1 className="font-bold text-xl font-sans">PHP Developer</h1>
-            <h3>Available jobs:45</h3>
+            <h3>Available jobs: 45</h3>
           </div>
         </div>
         <div className="card w-64 bg-gray-100 shadow-xl">
@@ -35,7 +35,7 @@ const AvailableJobs = () => {
               <FaLaravel className="text-5xl text-purple-400"></FaLaravel>
             </span>
             <h1 className="font-bold text-xl font-sans">Laravel Developer</h1>
-            <h3>Available jobs:30</h3>
+            <h3>Available jobs: 30+</h3>
           </div>
         </div>
         <div className="card w-64 bg-gray-100 shadow-xl">
@@ -46,7 +46,7 @@ const AvailableJobs = () => {
             <h1 className="font-bold text-lg font-sans">
               Javascript Developer
             </h1>
-            <h3>Available jobs:20</h3>
+            <h3>Available jobs: 20</h3>
           </div>
         </div>
       </div>
