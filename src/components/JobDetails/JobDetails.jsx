@@ -3,6 +3,7 @@ import { addToDb } from "../../utilities/fakeDb";
 
 const JobDetails = () => {
   const details = useLoaderData();
+  console.log("details", details);
 
   const handleApply = (id) => {
     addToDb(id);

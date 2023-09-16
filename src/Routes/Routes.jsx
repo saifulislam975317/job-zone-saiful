@@ -21,7 +21,19 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <JobDetails></JobDetails>,
-        loader: ({ params }) => {
+        loader: ({ params }) =>
+          fetch(`/jobs.json`)
+            .then((response) => response.json())
+            .then((data) => data.find((job) => job.id === params.id)),
+      },
+    ],
+  },
+]);
+
+export default router;
+
+/*
+ loader: ({ params }) => {
           const id = params.id;
           return fetch("/jobs.json") // Fetch the JSON file
             .then((response) => response.json())
@@ -34,9 +46,4 @@ const router = createBrowserRouter([
               return job;
             });
         },
-      },
-    ],
-  },
-]);
-
-export default router;
+*/
