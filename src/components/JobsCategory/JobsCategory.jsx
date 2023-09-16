@@ -1,13 +1,8 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useJobs from "../../hooks/useJobs";
 
 const JobsCategory = () => {
-  const [jobs, setJobs] = useState([]);
-  useEffect(() => {
-    fetch("jobs.json")
-      .then((res) => res.json())
-      .then((data) => setJobs(data));
-  }, []);
+  const [jobs] = useJobs();
 
   return (
     <div className="grid lg:grid-cols-3 my-12 gap-4 w-[1200px] mx-auto">

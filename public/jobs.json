@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "101",
     "jobTitle": "Software Engineer",
     "salary": "100k-150k",
     "type": "Remote",
@@ -15,7 +15,7 @@
     "experiences": 5
   },
   {
-    "id": 2,
+    "id": "102",
     "jobTitle": "React Developer",
     "salary": "90k-140k",
     "type": "Onsite",
@@ -30,7 +30,7 @@
     "experiences": 4
   },
   {
-    "id": 3,
+    "id": "103",
     "jobTitle": "PHP Developer",
     "salary": "80k-130k",
     "type": "Remote",
@@ -45,7 +45,7 @@
     "experiences": 8
   },
   {
-    "id": 4,
+    "id": "104",
     "jobTitle": "Laravel Developer",
     "salary": "95k-145k",
     "type": "Onsite",
@@ -60,7 +60,7 @@
     "experiences": 6
   },
   {
-    "id": 5,
+    "id": "105",
     "jobTitle": "Python Developer",
     "salary": "110k-160k",
     "type": "Remote",
@@ -75,7 +75,7 @@
     "experiences": 5
   },
   {
-    "id": 6,
+    "id": "106",
     "jobTitle": "Javascript Developer",
     "salary": "95k-140k",
     "type": "Onsite",

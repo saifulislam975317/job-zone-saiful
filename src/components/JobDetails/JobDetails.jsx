@@ -1,7 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import { addToDb } from "../../utilities/fakeDb";
 
 const JobDetails = () => {
   const details = useLoaderData();
+
+  const handleApply = (id) => {
+    addToDb(id);
+  };
 
   return (
     <div>
@@ -41,7 +46,12 @@ const JobDetails = () => {
               <p>Address: {details.address}</p>
             </div>
           </div>
-          <button className="btn btn-info w-full mt-2">Apply Now</button>
+          <button
+            onClick={() => handleApply(details.id)}
+            className="btn btn-info w-full mt-2"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
