@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "React ",
+    "available": 50
+  },
+  {
+    "id": "2",
+    "name": "PHP ",
+    "available": 45
+  },
+  {
+    "id": "3",
+    "name": "Laravel ",
+    "available": 65
+  },
+  {
+    "id": "4",
+    "name": "Javascript ",
+    "available": 40
+  }
+]

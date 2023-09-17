@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import useJobs from "../../hooks/useJobs";
+import { BiDollarCircle } from "react-icons/bi";
+import { ImLocation2 } from "react-icons/im";
 
 const JobsCategory = () => {
   const [jobs] = useJobs();
@@ -33,9 +35,14 @@ const JobsCategory = () => {
                 <h3 className="border-purple-300 border-2 font-bold p-1 rounded-md w-[60px] text-center mr-4">
                   {job.type}
                 </h3>
-                <p>Salary: {job.salary}</p>
+                <p>
+                  <BiDollarCircle className="inline text-2xl" /> Salary:
+                  {job.salary}
+                </p>
               </div>
-              <p>{job.address}</p>
+              <p>
+                <ImLocation2 className="inline text-2xl" /> {job.address}
+              </p>
               <Link
                 to={`/details/${job.id}`}
                 className="btn btn-sm btn-neutral w-1/3 text-xs"

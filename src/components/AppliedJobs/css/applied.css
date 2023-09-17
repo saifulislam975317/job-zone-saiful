@@ -1,6 +1,6 @@
 .area {
   display: grid;
-  grid-template-columns: 136px 564px 183px;
+  grid-template-columns: 163px 580px 183px;
   justify-content: center;
   align-items: center;
 }

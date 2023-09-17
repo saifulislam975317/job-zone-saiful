@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 import { BsFillTelephonePlusFill } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { BiDollarCircle } from "react-icons/bi";
+import { PiBagBold } from "react-icons/pi";
 
 const JobDetails = () => {
   const details = useLoaderData();
@@ -13,7 +15,7 @@ const JobDetails = () => {
     Swal.fire({
       position: "top-center",
       icon: "success",
-      title: "applied successfully",
+      title: "apply done",
       showConfirmButton: false,
       timer: 1500,
     });
@@ -49,13 +51,20 @@ const JobDetails = () => {
           <div className="bg-slate-300 opacity-100   p-8 rounded-lg md:h-1/2">
             <h1 className="border-b-2 border-black mt-4">Job details</h1>
             <div>
-              <h1>Job Title: {details.jobTitle}</h1>
-              <h2>Salary: {details.salary} (Per Month)</h2>
+              <h1>
+                <PiBagBold className="text-2xl inline" /> Job Title:
+                {details.jobTitle}
+              </h1>
+              <h2>
+                <BiDollarCircle className="text-2xl inline" /> Salary:
+                {details.salary} (Per Month)
+              </h2>
             </div>
             <div>
               <h1 className="border-b-2 border-black">Contact Information</h1>
-              <p className="flex text-xl  items-center">
-                <BsFillTelephonePlusFill className="text-2xl mr-2" /> Phone:
+              <p>
+                <BsFillTelephonePlusFill className="text-2xl inline mr-2" />
+                Phone:
                 {details.phone}
               </p>
               <p>
@@ -63,7 +72,7 @@ const JobDetails = () => {
                 {details.email}
               </p>
               <p>
-                <HiOutlineLocationMarker className="text-2xl inline mr-2" />{" "}
+                <HiOutlineLocationMarker className="text-2xl inline mr-2" />
                 Address: {details.address}
               </p>
             </div>

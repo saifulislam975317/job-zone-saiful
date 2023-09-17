@@ -3,6 +3,8 @@ import { getApplyJobs } from "../../utilities/fakeDb";
 import useJobs from "../../hooks/useJobs";
 import "./css/applied.css";
 import { Link } from "react-router-dom";
+import { BiDollarCircle } from "react-icons/bi";
+import { ImLocation2 } from "react-icons/im";
 
 const AppliedJobs = () => {
   const [jobs] = useJobs();
@@ -36,12 +38,15 @@ const AppliedJobs = () => {
                 <h1>{job?.jobTitle}</h1>
                 <h2>{job?.companyName}</h2>
                 <p>
-                  <span className="border-2 text-lg border-purple-200 rounded-md p-1 mr-2">
+                  <span className="border-purple-300 border-2 font-bold p-1 rounded-md w-[60px] mr-2">
                     {job?.type}
-                  </span>
+                  </span>{" "}
+                  <BiDollarCircle className="inline text-2xl" />
                   Salary: {job?.salary}
                 </p>
-                <p>{job?.address}</p>
+                <p>
+                  <ImLocation2 className="text-2xl inline" /> {job?.address}
+                </p>
               </div>
               <div>
                 <Link to={`/details/${job?.id}`}>
