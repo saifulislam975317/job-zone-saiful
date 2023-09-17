@@ -1,12 +1,24 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { addToDb } from "../../utilities/fakeDb";
+import Swal from "sweetalert2";
+import { BsFillTelephonePlusFill } from "react-icons/bs";
+import { AiFillMail } from "react-icons/ai";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
 const JobDetails = () => {
   const details = useLoaderData();
-  console.log("details", details);
-
+  const navigate = useNavigate();
   const handleApply = (id) => {
     addToDb(id);
+    Swal.fire({
+      position: "top-center",
+      icon: "success",
+      title: "applied successfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    navigate("/applied");
   };
 
   return (
@@ -14,7 +26,7 @@ const JobDetails = () => {
       <h1 className="md:text-center font-bold text-3xl mt-8 p-2">
         Job details
       </h1>
-      <div className="grid md:grid-cols-[800px,300px] my-8 gap-4 ">
+      <div className="grid md:grid-cols-[1000px,300px] my-8 gap-4 ">
         <div className="px-4 overflow-auto">
           <p>
             <span className="text-lg font-bold ">Job Description:</span>
@@ -42,9 +54,18 @@ const JobDetails = () => {
             </div>
             <div>
               <h1 className="border-b-2 border-black">Contact Information</h1>
-              <p>Phone: {details.phone}</p>
-              <p>Email: {details.email}</p>
-              <p>Address: {details.address}</p>
+              <p className="flex text-xl  items-center">
+                <BsFillTelephonePlusFill className="text-2xl mr-2" /> Phone:
+                {details.phone}
+              </p>
+              <p>
+                <AiFillMail className="text-2xl mr-2 inline" /> Email:
+                {details.email}
+              </p>
+              <p>
+                <HiOutlineLocationMarker className="text-2xl inline mr-2" />{" "}
+                Address: {details.address}
+              </p>
             </div>
           </div>
           <button
