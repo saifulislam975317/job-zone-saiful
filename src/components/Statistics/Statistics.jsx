@@ -5,7 +5,7 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
 const Statistics = () => {
   const [developers, setDevelopers] = useState([]);
-  console.log(developers);
+
   useEffect(() => {
     fetch("availableJobs.json")
       .then((res) => res.json())

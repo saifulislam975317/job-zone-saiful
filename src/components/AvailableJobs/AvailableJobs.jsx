@@ -3,14 +3,14 @@ import { TbBrandJavascript } from "react-icons/tb";
 const AvailableJobs = () => {
   return (
     <div className=" my-8">
-      <h1 className="lg:text-center text-start  font-bold font-sans text-2xl">
+      <h1 className="lg:text-center ml-4 text-start  font-bold font-sans text-2xl">
         Available Jobs
       </h1>
-      <p className="mb-12 lg:text-center text-start">
+      <p className="mb-12 lg:text-center text-start ml-4">
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:w-[90%] sm:mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-24">
         <div className="card w-64 bg-gray-100 shadow-xl">
           <div className="card-body flex flex-col justify-center items-center">
             <span>

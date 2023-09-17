@@ -2,21 +2,32 @@ import { Link } from "react-router-dom";
 import useJobs from "../../hooks/useJobs";
 import { BiDollarCircle } from "react-icons/bi";
 import { ImLocation2 } from "react-icons/im";
+import { useEffect, useState } from "react";
 
 const JobsCategory = () => {
   const [jobs] = useJobs();
+  const [dataToDisplay, setDataToDisplay] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    if (showAll) {
+      setDataToDisplay(jobs);
+    } else {
+      setDataToDisplay(jobs.slice(0, 3));
+    }
+  }, [jobs, showAll]);
 
   return (
     <div>
-      <h1 className="lg:text-center text-start mt-12 font-bold font-sans text-2xl">
+      <h1 className="lg:text-center text-start mt-12 font-bold font-sans text-2xl ml-24">
         Jobs Category
       </h1>
-      <p className="mb-12 lg:text-center text-start">
+      <p className="mb-12 ml-2 lg:text-center text-start">
         Discover diverse job opportunities in our company. Find your ideal job
         with ease at our jobzone website.
       </p>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 my-12 gap-4 w-[1200px] mx-auto">
-        {jobs?.map((job) => (
+      <div className="grid grid-cols-1 p-12 lg:grid-cols-3 md:grid-cols-2 mt-12 gap-4">
+        {dataToDisplay?.map((job) => (
           <div
             key={job.id}
             className="card card-compact w-96 bg-base-100 shadow-xl"
@@ -52,6 +63,14 @@ const JobsCategory = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center items-center mb-12  ">
+        <button
+          className="btn btn-warning"
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? "Show Less" : "Show All"}
+        </button>
       </div>
     </div>
   );

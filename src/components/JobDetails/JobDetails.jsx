@@ -49,7 +49,7 @@ const JobDetails = () => {
         </div>
         <div>
           <div className="bg-slate-300 opacity-100   p-8 rounded-lg md:h-1/2">
-            <h1 className="border-b-2 border-black mt-4">Job details</h1>
+            <h1 className="border-b-2 border-black mt-2">Job details</h1>
             <div>
               <h1>
                 <PiBagBold className="text-2xl inline" /> Job Title:

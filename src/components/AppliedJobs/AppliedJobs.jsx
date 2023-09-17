@@ -38,9 +38,9 @@ const AppliedJobs = () => {
                 <h1>{job?.jobTitle}</h1>
                 <h2>{job?.companyName}</h2>
                 <p>
-                  <span className="border-purple-300 border-2 font-bold p-1 rounded-md w-[60px] mr-2">
+                  <span className="border-purple-300 border-2 font-bold p-1 rounded-md w-[65px] mr-2">
                     {job?.type}
-                  </span>{" "}
+                  </span>
                   <BiDollarCircle className="inline text-2xl" />
                   Salary: {job?.salary}
                 </p>
