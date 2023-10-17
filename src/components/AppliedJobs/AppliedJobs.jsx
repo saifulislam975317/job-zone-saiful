@@ -28,7 +28,7 @@ const AppliedJobs = () => {
         {applied?.map((job) => (
           <div
             key={job?.id}
-            className="card w-3/4 border-2 border-slate-200 p-4"
+            className="card  border-2 border-slate-200 mb-4 p-4"
           >
             <div className="area">
               <div className="">

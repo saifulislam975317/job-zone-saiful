@@ -25,24 +25,22 @@ const JobDetails = () => {
 
   return (
     <div>
-      <h1 className="md:text-center font-bold text-3xl mt-8 p-2">
-        Job details
-      </h1>
+      <h1 className="text-center font-bold text-3xl mt-8 p-2">Job details</h1>
       <div className="grid md:grid-cols-[1000px,300px] my-8 gap-4 ">
         <div className="px-4 overflow-auto">
           <p>
-            <span className="text-lg font-bold ">Job Description:</span>
+            <span className="text-lg  font-bold ">Job Description: </span>
             {details.description}
           </p>
-          <p>
-            <span className="text-lg font-bold">Job Responsibility: </span>
+          <p className="my-4">
+            <span className="text-lg  font-bold">Job Responsibility: </span>
             {details.responsibility}
           </p>
           <p>
             <span className="text-lg font-bold">Job Requirements: </span>
             {details.requirements}
           </p>
-          <p>
+          <p className="mt-4">
             <span className="text-lg font-bold">Experiences: </span>
             {details.experiences}
           </p>

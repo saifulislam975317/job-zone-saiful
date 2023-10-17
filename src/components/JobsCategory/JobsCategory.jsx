@@ -19,18 +19,19 @@ const JobsCategory = () => {
 
   return (
     <div>
-      <h1 className="lg:text-center text-start mt-12 font-bold font-sans text-2xl ml-24">
-        Jobs Category
-      </h1>
-      <p className="mb-12 ml-2 lg:text-center text-start">
-        Discover diverse job opportunities in our company. Find your ideal job
-        with ease at our jobzone website.
-      </p>
+      <div className="text-center">
+        <h1 className="font-bold font-sans text-2xl">Jobs Category</h1>
+        <p className="px-2">
+          Discover diverse job opportunities in our company. Find your ideal job
+          with ease at our jobzone website.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 p-12 lg:grid-cols-3 md:grid-cols-2 mt-12 gap-4">
         {dataToDisplay?.map((job) => (
           <div
             key={job.id}
-            className="card card-compact w-96 bg-base-100 shadow-xl"
+            className="card card-compact w-96 bg-base-100  shadow-xl"
           >
             <div>
               <img
@@ -39,7 +40,7 @@ const JobsCategory = () => {
                 alt="jobs"
               />
             </div>
-            <div className="card-body">
+            <div className="card-body ">
               <h2 className="card-title">{job.jobTitle}</h2>
               <p>{job.companyName}</p>
               <div className="flex justify-around items-center">
